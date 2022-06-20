@@ -1,8 +1,6 @@
-import '@actions/core';
-import exec from '@actions/exec';
-
+const core = require('@actions/core');
+const github = require('@actions/github');
 try{
-   const core = require('@actions/core')
    core.info('启动TCA......');
 } catch (error){
     setFailed(error.message);
