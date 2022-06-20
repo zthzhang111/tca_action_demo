@@ -11,6 +11,4 @@ jobs:
 
       - name: TCA
         uses: ./
-        with:
-          label: open_source_check
   
