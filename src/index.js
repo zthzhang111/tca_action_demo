@@ -1,9 +1,9 @@
-const core = require('@actions/core');
-const exec = require('@actions/exec');
+import '@actions/core';
+import exec from '@actions/exec';
 
 try{
-   
-    core.info('启动TCA......');
+   const core = require('@actions/core')
+   core.info('启动TCA......');
 } catch (error){
-    core.setFailed(error.message);
+    setFailed(error.message);
 }
