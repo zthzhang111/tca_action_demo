@@ -12,5 +12,5 @@ jobs:
       - name: TCA
         uses: ./
         with:
-          code_path: '代码路径'
+          label: '规则标签'
   
