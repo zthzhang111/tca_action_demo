@@ -11,4 +11,6 @@ jobs:
 
       - name: TCA
         uses: ./
+        with:
+          code_path: ${{GITHUB_WORKSPACE}}
   
