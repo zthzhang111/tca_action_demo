@@ -6,8 +6,8 @@ const exec = require('child_process').exec
 try{
     core.info(shelljs.exec('pwd'))
     const cmd = 'codepuppy quickinit'
-    const cwd = 'tca-client'
-    exec(cmd, { cwd }, function (error, stdout, stderr){})
+    const cwd = './tca-client'
+    exec('ls', { cwd: cwd }, function (error, stdout, stderr){})
 
     core.info('clinet初始化中......')
     shelljs.exec('codepuppy quickinit', {cwd:'tca-client'})
