@@ -4,6 +4,7 @@ const shelljs = require('shelljs')
 const exec = require('child_process').exec
 
 try{
+    core.info(exec.cwd())
     const cmd = 'codepuppy quickinit'
     const cwd = 'tca-client'
     exec(cmd, { cwd }, function (error, stdout, stderr){})
