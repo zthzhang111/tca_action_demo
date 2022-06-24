@@ -8,7 +8,7 @@ inputs:
   code_path:
     description: '扫描代码路径'
     required: false
-    default: 123
+    default:
 outputs:
   report:
     description: 'The scan result'
