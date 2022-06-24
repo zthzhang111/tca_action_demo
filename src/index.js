@@ -4,13 +4,13 @@ const shelljs = require('shelljs')
 const exec = require('child_process').exec
 
 try{
-    core.info(shelljs.exec('pwd'))
+    
     const cmd = 'codepuppy quickinit'
     const cwd = './tca-client'
-    exec('ls', 'tca-client', function (error, stdout, stderr){})
+    shelljs.exec('ls', 'tca-client', function (error, stdout, stderr){})
 
     core.info('clinet初始化中......')
-    shelljs.exec('codepuppy quickinit', {cwd:'tca-client'})
+    shelljs.exec('codepuppy quickinit', 'tca-client')
     core.info('client初始化完成')
 
     core.info('获取参数......');
