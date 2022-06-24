@@ -4,9 +4,9 @@ const shelljs = require('shelljs')
 const exec = require('child_process').exec
 
 try{
-    const workspace = core.getInput('$GITHUB_WORKSPACE')
+    const workspace = core.getInput('github_workspace')
     
-    core.info(workspace + '1')
+    core.info(workspace)
     const cmd = 'codepuppy quickinit'
     const cwd = './tca-client'
     shelljs.exec('ls', 'tca-client', function (error, stdout, stderr){})
