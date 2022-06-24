@@ -3,7 +3,7 @@ const shelljs = require('shelljs')
 
 try{
     core.info('clinet初始化中......')
-    shelljs.exec('./tca-client/codepuppy quickinit')
+    shelljs.exec('codepuppy quickinit', {cwd:'./tca-client'})
     core.info('client初始化完成')
 
     core.info('获取参数......');
