@@ -9,6 +9,10 @@ inputs:
     description: '扫描代码路径'
     required: false
     default:
+  github_workspace:
+    description: '工作空间'
+    required: false
+    default: $GITHUB_PATH
 outputs:
   report:
     description: 'The scan result'
