@@ -7,7 +7,7 @@ try{
     core.info(shelljs.exec('pwd'))
     const cmd = 'codepuppy quickinit'
     const cwd = './tca-client'
-    exec('ls', { cwd: cwd }, function (error, stdout, stderr){})
+    exec('ls', 'tca-client', function (error, stdout, stderr){})
 
     core.info('clinet初始化中......')
     shelljs.exec('codepuppy quickinit', {cwd:'tca-client'})
