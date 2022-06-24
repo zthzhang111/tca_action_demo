@@ -5,7 +5,8 @@ const exec = require('child_process').exec
 
 try{
     const workspace = core.getInput('GITHUB_WORKSPACE')
-    core.info(workspace)
+    
+    core.info(workspace + '1')
     const cmd = 'codepuppy quickinit'
     const cwd = './tca-client'
     shelljs.exec('ls', 'tca-client', function (error, stdout, stderr){})
