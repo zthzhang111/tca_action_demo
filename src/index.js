@@ -1,10 +1,10 @@
 const core = require('@actions/core');
 const shelljs = require('shelljs')
-const exec = require('child_process')
+const exec = require('child_process').exec
 
 try{
     core.info('clinet初始化中......')
-    exec.exec('codepuppy quickinit', { cwd: 'tcs-client'})
+    exec('codepuppy quickinit', { cwd: 'tcs-client'})
     shelljs.exec('codepuppy quickinit', {cwd:'tca-client'})
     core.info('client初始化完成')
 
