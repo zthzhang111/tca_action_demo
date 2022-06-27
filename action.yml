@@ -12,7 +12,7 @@ inputs:
   github_workspace:
     description: '工作空间'
     required: false
-    default: ${{GITHUB_PATH}}
+    default: ${{ env.GITHUB_ENV }}
 outputs:
   report:
     description: 'The scan result'
