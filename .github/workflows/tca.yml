@@ -13,5 +13,3 @@ jobs:
         uses: ./
         with:
           label: 'open_source_check'
-          github_workspace: ${{ env.GITHUB_ENV }}
-  
