@@ -10,8 +10,8 @@ try{
     core.info('......')
 
     const cmd = 'codepuppy quickinit'
-    child_process.exec('ls', filePath, function (error, stdout, stderr){
-        core.info(stdout)
+    child_process.exec('./codepuppy quickinit', filePath, function (error, stdout, stderr){
+        core.info('初始化')
     })
 
     core.info('clinet初始化中......')
