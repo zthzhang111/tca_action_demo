@@ -9,7 +9,7 @@ try{
     core.info(filePath)
     core.info('......')
 
-    const cmd = 'codepuppy quickinit'
+    const cmd_init = './codepuppy quickinit'
     child_process.exec('./codepuppy quickinit', filePath, function (error, stdout, stderr){
         core.info('初始化')
     })
