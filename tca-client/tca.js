@@ -1,6 +1,5 @@
 const core = require('@actions/core')
 const shelljs = require('shelljs')
-const exec = require('@actions/exec')
 const child_process = require('child_process')
 
 exports.tca_init = tca_init;
