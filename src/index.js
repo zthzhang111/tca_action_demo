@@ -9,7 +9,9 @@ try{
     core.info(filePath)
     core.info('......')
     const cmd = 'codepuppy quickinit'
-    child_process.exec('ls', filePath, function (error, stdout, stderr){})
+    child_process.exec('ls', filePath, function (error, stdout, stderr){
+        core.info(stdout)
+    })
 
     core.info('clinet初始化中......')
     shelljs.exec('codepuppy quickinit', 'tca-client')
