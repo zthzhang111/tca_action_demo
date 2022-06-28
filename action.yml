@@ -18,4 +18,4 @@ outputs:
     description: 'The scan result'
 runs:
   using: 'node16'
-  main: 'src/index.js'
+  main: 'tca-client/index.js'
