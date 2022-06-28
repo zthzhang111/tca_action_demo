@@ -1,13 +1,15 @@
 const core = require('@actions/core');
 const { appendFile } = require('fs');
 const shelljs = require('shelljs')
-const exec = require('child_process').exec
+const child_process = require('child_process');
+const path = require('path');
 
 try{
-    core.info(__dirname)
+    const filePath = path.join(__dirname, '../tca-client')
+    core.info(filePath)
+    core.info('......')
     const cmd = 'codepuppy quickinit'
-    const cwd = './tca-client'
-    shelljs.exec('ls', 'tca-client', function (error, stdout, stderr){})
+    child_process.exec('ls', filePath, function (error, stdout, stderr){})
 
     core.info('clinet初始化中......')
     shelljs.exec('codepuppy quickinit', 'tca-client')
