@@ -1,18 +1,10 @@
-const core = require('@actions/core');
-const { appendFile } = require('fs');
+const core = require('@actions/core')
 const shelljs = require('shelljs')
-const child_process = require('child_process');
-const path = require('path');
+const tca = require('../tca-client/tca.js')
 
 try{
-    const filePath = path.join(__dirname, '../tca-client')
-    core.info(filePath)
-    core.info('......')
-
-    const cmd_init = './codepuppy quickinit'
-    child_process.exec('./codepuppy quickinit', filePath, function (error, stdout, stderr){
-        core.info('初始化')
-    })
+    tca.tca_init()
+    core.info('调用结束')
 
     core.info('clinet初始化中......')
     shelljs.exec('./tca-client/codepuppy quickinit')
