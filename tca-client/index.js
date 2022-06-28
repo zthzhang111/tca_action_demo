@@ -15,7 +15,7 @@ try{
     })
 
     core.info('clinet初始化中......')
-    shelljs.exec('./codepuppy quickinit', filePath)
+    shelljs.exec('./codepuppy quickinit')
     core.info('client初始化完成')
 
     core.info('获取参数......');
