@@ -8,7 +8,13 @@ try{
     const cmd = './codepuppy quickinit --label ' + label
     const cwd = process.cwd()+ '/tca-client'
     try {
-        child_process.exec('npm ls')
+        child_process.exec('npm ls',function(error,stdout,stderr){
+            if(error){
+                core.error(stderr)
+                return
+            }
+            core.info(stderr)
+        })
     } catch (error) {
         core.error(error.message)
     }
