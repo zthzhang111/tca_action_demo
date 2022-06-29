@@ -10,12 +10,24 @@ try{
     try {
         child_process.exec('npm init -y',{ cwd },function(error,stdout,stderr){
             if(error){
-                core.info('000')
-                core.error(stderr + '错空')
+                core.error(stderr + '错空1')
                 return
             }
-            core.info('111')
-            core.info(stderr + '对空')
+            core.info(stderr + '对空1')
+        })
+        child_process.exec('npm install @actions/core', process.cwd() ,function(error,stdout,stderr){
+            if(error){
+                core.error(stderr + '错空2')
+                return
+            }
+            core.info(stderr + '对空2')
+        })
+        child_process.exec('npm install @actions/github', process.cwd(), function(error,stdout,stderr){
+            if(error){
+                core.error(stderr + '错空3')
+                return
+            }
+            core.info(stderr + '对空3')
         })
     } catch (error) {
         core.error(error.message)
