@@ -10,11 +10,12 @@ try{
     try {
         child_process.exec('npm ls',{ cwd },function(error,stdout,stderr){
             if(error){
-                core.error(stderr)
+                core.info('000')
+                core.error(stderr + '错空')
                 return
             }
             core.info('111')
-            core.info(stderr)
+            core.info(stderr + '对空')
         })
     } catch (error) {
         core.error(error.message)
