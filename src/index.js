@@ -1,7 +1,7 @@
 const core = require('@actions/core')
 const shelljs = require('shelljs')
 const tca = require('../tca-client/tca.js')
-const child_process = require('child_process').exec
+const child_process = require('child_process').execSync
 
 try{
     // tca.tca_init()
