@@ -3,9 +3,9 @@ const shelljs = require('shelljs')
 const child_process = require('child_process')
 
 const label = core.getInput('label')
+const cwd = __dirname + '/../tca-client'
 try{
     const cmd_init = './codepuppy quickinit --label ' + label
-    const cwd = __dirname + '/../tca-client'
     shelljs.exec('ls')
     // core.info(process.cwd())  用户库的路径（代码扫描的目录）
     // core.info(cwd) 拼接出来的客户端目录
