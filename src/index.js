@@ -1,22 +1,24 @@
 const core = require('@actions/core')
 const shelljs = require('shelljs')
 const tca = require('../tca-client/tca.js')
+const child_process = require('child_process').exec
 
 try{
-    tca.tca_init()
-    core.info('调用结束')
+    // tca.tca_init()
 
-    core.info('clinet初始化中......')
-    shelljs.exec('./tca-client/codepuppy quickinit')
-    core.info('client初始化完成')
-
-    core.info('获取参数......');
-    const code_path = core.getInput('code_path');
-    const label = core.getInput('label');
-    core.info(code_path);
-    core.info(label)
-    core.info('启动TCA......');
-    shelljs.exec('./tca-client/codepuppy quickscan --label' + label + '-s ./');
+    core.info('工具初始化中........')
+    const label = core.getInput('label')
+    const cmd = './codepuppy quickinit --label' + label
+    const cwd = process.cwd()+ '/tca-client'
+    child_process(cmd, { cwd }, function(error, stdout, stderr){
+        if (error){
+            core.info('打印错误log')
+            core.error(stderr)
+            return
+        }
+        core.info('run ${cwd} successfully')
+    })
+    core.info('工具初始化完成........')
 } catch (error){
     core.setFailed(error.message);
 }
