@@ -17,8 +17,8 @@ try{
             return
         }
         core.info(stderr)
+        core.info('工具初始化完成........')
     })
-    core.info('工具初始化完成........')
 } catch (error){
     core.setFailed(error.message);
 }
