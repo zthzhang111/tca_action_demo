@@ -8,6 +8,7 @@ try{
     const cmd = './codepuppy quickinit --label ' + label
     const cwd = __dirname + '/../tca-client'
     core.info(cwd)
+    core.info(__dirname)
     core.info('工具初始化中........')
     child_process.execSync(cmd, { cwd }, function(error, stdout, stderr){
         if (error){
