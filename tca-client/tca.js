@@ -8,6 +8,8 @@ function tca_init(){
     const cwd = process.cwd()+ '/tca-client'
     child_process(cmd, { cwd }, function(error, stdout, stderr){
         if (error){
+            core.info('打印错误log')
+            core.error(stderr)
             return
         }
         core.info('run ${cwd} successfully')
