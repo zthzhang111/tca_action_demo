@@ -7,6 +7,7 @@ try{
     const label = core.getInput('label')
     const cmd = './codepuppy quickinit --label ' + label
     const cwd = __dirname + '/../tca-client'
+    shelljs.exec('ls')
     core.info(cwd)
     core.info(__dirname)
     core.info('工具初始化中........')
