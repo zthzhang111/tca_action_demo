@@ -14,7 +14,10 @@ try{
         }
         console.log(stderr)
     })
-    console.log('初始化完成')
+    setTimeout(() => {
+        console.log('初始化完成........')
+    }, 200);
+
 
 
 } catch (error){
