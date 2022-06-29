@@ -16,7 +16,7 @@ try{
             core.error(stderr)
             return
         }
-        core.info('run ${cwd} successfully')
+        core.info(stdout)
     })
     core.info('工具初始化完成........')
 } catch (error){
