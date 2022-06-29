@@ -2,9 +2,8 @@ const core = require('@actions/core')
 const shelljs = require('shelljs')
 const child_process = require('child_process')
 
-
+const label = core.getInput('label')
 try{
-    const label = core.getInput('label')
     const cmd_init = './codepuppy quickinit --label ' + label
     const cwd = __dirname + '/../tca-client'
     shelljs.exec('ls')
