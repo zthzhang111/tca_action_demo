@@ -1,5 +1,4 @@
 const core = require('@actions/core')
-const shelljs = require('shelljs')
 const child_process = require('child_process')
 
 const label = core.getInput('label')
@@ -14,7 +13,11 @@ const url = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.
 const fileName = 'tca.zip'
 const dir = __dirname + '/../'
 core.info(__dirname + '/../')
-shelljs.exec('ls')
+child_process.execSync(ls, { dir }, function(error, stdout, stderr){
+            if (error){
+                core.error(stderr)
+                return
+            }})
 
 let stream = fs.createWriteStream(path.join(dir, fileName))
 request(url).pipe(stream).on('close', function(error){
