@@ -14,6 +14,7 @@ const url = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.
 const fileName = 'tca.zip'
 const dir = __dirname
 core.info(__dirname)
+shelljs.exec('ls')
 
 let stream = fs.createWriteStream(path.join(dir, fileName))
 request(url).pipe(stream).on('close', function(error){
