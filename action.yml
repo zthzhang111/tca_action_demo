@@ -5,14 +5,6 @@ inputs:
     description: '规则标签'
     required: false
     default: 'open_source_check'
-  code_path:
-    description: '扫描代码路径'
-    required: false
-    default:
-  github_workspace:
-    description: '工作空间'
-    required: false
-    default:
 outputs:
   report:
     description: 'The scan result'
