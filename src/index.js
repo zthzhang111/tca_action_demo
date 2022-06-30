@@ -13,7 +13,7 @@ const url = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.
 const fileName = 'tca.zip'
 const dir = __dirname + '/../'
 core.info(__dirname + '/../')
-child_process.execSync(ls, { dir }, function(error, stdout, stderr){
+child_process.execSync('ls', { dir }, function(error, stdout, stderr){
             if (error){
                 core.error(stderr)
                 return
