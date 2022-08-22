@@ -1,15 +1,13 @@
-name: 'TCA'
 on: [push]
 
 jobs:
-  CodeAnalysis:
+  Code Analysis:
     runs-on: ubuntu-latest
-    name: Tencent Cloud Code Analysis
+    name: code analysis
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
       - name: TCA
-        uses: zthzhang111/Tca_Plugin_Action@v1.1
+        uses: bensonhome/Tca_Plugin_Action@master
         with:
-          label: 'open_source_check'
+          label: open-standard
