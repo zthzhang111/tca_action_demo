@@ -9,5 +9,5 @@ shelljs.exec('ls')
 
 let stream = fs.createWriteStream(path.join(dir, fileName))
 request(url).pipe(stream).on('close', function(error){
-    console.log(fileName + '下载完毕')
+    
 })
